@@ -1,4 +1,4 @@
-# LazySingleton in C#
+# LazySingleton in C`#`
 
 .NET 4 provides `Lazy<T>` which allows us to implement a thread-safe singleton in C# *without the need to write an explicit double-checked locking*.  A canonical example is show below
 
