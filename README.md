@@ -5,16 +5,14 @@
 ```
 public class SingletonUsingLazy
 {
-   private static readonly Lazy<SingletonUsingLazy> _singletonUsingLazy = new Lazy<SingletonUsingLazy>(() => new SingletonUsingLazy());
+   private static readonly Lazy<SingletonUsingLazy> _singletonUsingLazy = 
+      new Lazy<SingletonUsingLazy>(() => new SingletonUsingLazy());
 
    private SingletonUsingLazy() { }
 
    public static SingletonUsingLazy Instance
    {
-      get
-      {
-         return _singletonUsingLazy.Value;
-      }
+      get { return _singletonUsingLazy.Value; }
    }
 }
 ```
