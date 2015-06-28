@@ -19,6 +19,7 @@ public class SingletonUsingLazy
 
 Prior to .NET 4.0, double-checked locking was necessary to be thread safe.  Lots of extra code that we no longer need.
 ```
+[Deprecated]
 public sealed class Singleton
 {
    private static volatile Singleton _instance;
