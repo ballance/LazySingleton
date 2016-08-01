@@ -23,7 +23,7 @@ Prior to .NET 4.0, double-checked locking was necessary to be thread safe.  Lots
 public sealed class Singleton
 {
    private static volatile Singleton _instance;
-   private static readonly object InstanceLoker= new Object();
+   private static readonly object InstanceLocker= new Object();
 
    private Singleton() {}
 
@@ -33,7 +33,7 @@ public sealed class Singleton
       {
          if (_instance == null) 
          {
-            lock (InstanceLoker) 
+            lock (InstanceLocker) 
             {
                if (_instance == null) 
                   _instance = new Singleton();
